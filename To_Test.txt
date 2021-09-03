@@ -1,0 +1,24 @@
+1- Run the C# API App
+
+--------------------
+2- Run the cmd
+
+
+then
+2.1- Run this line for Get method 
+
+curl -v http://localhost:56421/api/GetEntry?bodyDetail='{"username":"xyz"+"password":"xyz"}' --header "Content-Type: application/json"
+
+
+
+2.2-  Run this line for Post method
+
+curl -i -X POST --header "Content-Type: application/json" --data '{"username":"xyz","password":"xyz"}' http://localhost:56421/api/Entry
+
+
+
+the output of each method will be printed in .txt file called Response.txt 
+
+Note: the path of Responce file is to MyDocuments you can change the path if you want 
+
+from this line (101)  string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
